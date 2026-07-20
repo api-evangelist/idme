@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.id.me/guides/oidc/overview
+docs: https://docs.id.me/guides/open-id-connect/configuration
+oidc_issuer: https://api.id.me/oidc
+discovery: https://api.id.me/oidc/.well-known/openid-configuration
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  pkce: true
+  token_endpoint_auth_methods: [client_secret_post, client_secret_basic]
+schemes:
+- name: OpenIDConnect
+  type: openIdConnect
+  openIdConnectUrl: https://api.id.me/oidc/.well-known/openid-configuration
+  issuer: https://api.id.me/oidc
+  sources: [well-known/idme-openid-configuration.json]
+- name: OAuth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.id.me/oauth/authorize
+    tokenUrl: https://api.id.me/oauth/token
+    userinfoUrl: https://api.id.me/api/public/v3/userinfo
+    jwksUrl: https://api.id.me/oidc/.well-known/jwks
+    pkce: true
+    refresh_token: true
+  sources: [well-known/idme-openid-configuration.json]
+- name: ServicesApiBearer
+  type: http
+  scheme: bearer
+  description: >-
+    ID.me Services API uses a Base64-encoded account secret sent as
+    "Authorization: Bearer ID.me {token}".
+  applies_to: https://services.idmelabs.com
+  sources: [https://docs.id.me/services-api-overview]
+token_details:
+  id_token_signing_alg: [RS256, ES256]
+  id_token_encryption_alg: [RSA-OAEP]
+  id_token_encryption_enc: [A256CBC-HS512]
+  userinfo_signing_alg: [RS256, ES256]
+notes: >-
+  Also supports SAML 2.0 federation for IAM platforms (Okta, Keycloak, Microsoft
+  Entra External ID, PingOne, AWS Cognito). See docs.id.me/guides/saml/overview.
