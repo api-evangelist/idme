@@ -1,0 +1,61 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.id.me/oidc/.well-known/openid-configuration
+docs: https://docs.id.me/integrations/configurations/configuration-standards
+schemes:
+- name: OAuth2
+  source: well-known/idme-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.id.me/oauth/authorize
+    tokenUrl: https://api.id.me/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; returns an ID token.
+  sources: [well-known/idme-openid-configuration.json]
+# ID.me maps "scope" to a verification policy/community group. The discovery doc
+# advertises only `openid`; the following are the standard community/affiliation
+# scope values documented in the configuration standards reference.
+- scope: military
+  description: Members and dependents of the uniformed services.
+  group: community
+- scope: responder
+  description: Active and retired members of the first responder community.
+  group: community
+- scope: student
+  description: Members actively enrolled in accredited public/private universities or colleges.
+  group: community
+- scope: teacher
+  description: Members of the teaching community.
+  group: community
+- scope: government
+  description: Members employed by federal, state, or local governments.
+  group: community
+- scope: employee
+  description: Members employed by partnering companies.
+  group: community
+- scope: hospital_employee
+  description: Members employed by hospitals and healthcare systems.
+  group: community
+- scope: alumni
+  description: Members with degrees from accredited institutions.
+  group: community
+- scope: nurse
+  description: Members of the nursing community.
+  group: community
+- scope: medical
+  description: Members of the medical professional community.
+  group: community
+authn_context:
+- value: mfa
+  description: Multi-factor authentication.
+- value: kba_replacement
+  description: Identity proofing requiring one piece of evidence.
+- value: fortified_identity
+  description: Identity proofing requiring two pieces of evidence.
+- value: http://idmanagement.gov
+  description: NIST IAL2/AAL2 identity assurance.
+notes: >-
+  Canadian community equivalents also exist (military_canada, responder_canada,
+  student_canada, teacher_canada, government_canada, nurse_canada, doctor_canada,
+  alumni_canada). Scopes resolve to policies configured per client application.

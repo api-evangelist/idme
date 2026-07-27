@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+spec_type: Webhooks
+source: https://docs.id.me/services-api/webhooks
+surfaces:
+- name: Services API webhooks
+  docs: https://docs.id.me/services-api/webhooks
+  delivery: HTTPS push
+  configuration:
+  - org-level (via ID.me account manager)
+  - per-request `callback_url` parameter on a transaction
+  retry: ID.me retries the request 3 times before dropping the callback.
+  payload: >-
+    Matches GET /api/v2/:product/:transaction_id — includes transaction_id,
+    verification_id, product, and status {code, message, created, updated}.
+  events:
+  - name: Telecom Verification Result
+    description: Delivers telecom transaction outcomes.
+  - name: Document Verification Result
+    description: Delivers document (license/passport) transaction outcomes.
+- name: Shared Signals Framework (SSF)
+  docs: https://docs.id.me/guides/shared-signals-framework/ssf-overview
+  delivery: HTTPS push of Security Event Tokens (SET, RFC 8417)
+  standards:
+  - OpenID Shared Signals Framework 1.0
+  - OpenID RISC Profile 1.0
+  - RFC 8417 (Security Event Token)
+  events:
+  - name: Fraud event notifications
+    docs: https://docs.id.me/shared-signals-framework/fraud-event-notifications
+  - name: User verification events
+    docs: https://docs.id.me/shared-signals-framework/user-verification-events
+  - name: Audit logs
+    docs: https://docs.id.me/shared-signals-framework/audit-logs
+    status: coming soon
+notes: >-
+  ID.me documents webhooks and an SSF event stream but publishes no AsyncAPI
+  document; this is a captured webhook/event catalog (type: Webhooks), not an
+  AsyncAPI spec.

@@ -1,0 +1,63 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.id.me/guides/o-auth-2-0/error-codes
+format: oauth2-error
+envelope:
+  oauth2: query/body `error` parameter per RFC 6749
+  services_api: >-
+    response["status"]["code"] (transaction status) plus
+    response["results"]["errors"][] with {code, message}
+oauth2_errors:
+- context: authorization_code / implicit
+  http_status: 200
+  errors:
+  - code: invalid_request
+    description: client_id, response_type, or redirect_uri is missing.
+  - code: invalid_client
+    description: client_id cannot be resolved to an application.
+  - code: invalid_scope
+    description: scope cannot be resolved to an existing policy for the client.
+  - code: invalid_redirect_uri
+    description: redirect_uri cannot be resolved to any configured redirect URIs.
+  - code: unsupported_response_type
+    description: response_type is not `code` or `token`.
+- context: logout
+  http_status: 200
+  errors:
+  - code: invalid_request
+    description: client_id or redirect_uri is missing.
+  - code: invalid_client
+    description: client_id cannot be resolved to a consumer.
+  - code: invalid_redirect_uri
+    description: redirect_uri cannot be resolved to any configured redirect URIs.
+- context: token exchange / refresh
+  http_status: 400
+  errors:
+  - code: invalid_request
+    description: Missing scope, grant_type, client_id, client_secret, code, or refresh_token.
+  - code: invalid_client
+    description: Credentials cannot be resolved to a consumer.
+  - code: invalid_scope
+    description: scope cannot be resolved to an existing policy for the client.
+  - code: unauthorized_client
+    description: Consumer lacks permission for the specified grant_type.
+  - code: invalid_grant
+    description: Authorization code or refresh token is invalid, expired, revoked, or mismatched.
+  - code: invalid_redirect_uri
+    description: redirect_uri cannot be resolved to any configured redirect URIs.
+  - code: invalid_resource_owner
+    description: User authentication failed with the provided credentials.
+services_api_http_statuses:
+- {status: 200, meaning: Success}
+- {status: 401, meaning: Authentication failure}
+- {status: 403, meaning: Access restricted}
+- {status: 404, meaning: Missing resource}
+- {status: 422, meaning: Invalid inputs}
+- {status: 429, meaning: Rate limited}
+- {status: 500, meaning: Internal error}
+services_api_example_error:
+  code: 2200
+  message: Referenced product is not active
+notes: >-
+  OAuth authorization/logout errors are returned with HTTP 200 (error carried in
+  the `error` parameter on the redirect); token/refresh errors use HTTP 400.

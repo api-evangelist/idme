@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://docs.id.me/llms.txt
+server:
+  name: ID.me Developer Docs
+  transport: http
+  url: https://docs.id.me/_mcp/server
+  description: >-
+    Official hosted MCP server for the ID.me developer documentation, advertised
+    in docs.id.me/llms.txt for AI client integration (Claude Code, Cursor, etc.).
+    Surfaces the ID.me integration docs — OIDC/OAuth2/SAML guides, Services API,
+    SSF, SDKs — to coding agents.
+scope: documentation
+notes: >-
+  This is a documentation MCP server (docs retrieval), not a transactional MCP
+  wrapper of the identity-verification APIs. No hosted MCP server for the
+  Services API or OIDC endpoints is published as of this pass.

@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.id.me/services-api-overview
+authentication:
+  oidc_oauth2:
+    style: OAuth 2.0 / OpenID Connect authorization code flow with PKCE
+    authorization_url: https://api.id.me/oauth/authorize
+    token_url: https://api.id.me/oauth/token
+    userinfo_url: https://api.id.me/api/public/v3/userinfo
+    ref: authentication/idme-authentication.yml
+  services_api:
+    style: Bearer token
+    header: 'Authorization: Bearer ID.me {token}'
+    token_encoding: Base64-encoded account secret key
+versioning:
+  style: uri-path
+  oidc: /api/public/v3
+  services: /api/v2
+error_envelope:
+  oauth2: RFC 6749 `error` parameter on redirect (auth) / HTTP 400 body (token)
+  services_api:
+    http_status: transport-level status
+    transaction_status: response["status"]["code"]
+    errors: response["results"]["errors"][] with {code, message}
+  ref: errors/idme-problem-types.yml
+webhooks:
+  supported: true
+  style: HTTPS push; per-request `callback_url` or org-level configuration
+  retry: ID.me retries 3 times before dropping the callback
+  events: [telecom verification result, document verification result]
+  ref: asyncapi/idme-services-webhooks.yml
+event_streaming:
+  shared_signals_framework: true
+  spec: OpenID Shared Signals Framework 1.0 (SSF), RISC profile, SET (RFC 8417)
+  delivery: HTTPS push of Security Event Tokens
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header or contract is documented. Verification requests
+    are keyed by transaction_id/verification_id assigned by ID.me; callers do
+    not supply an idempotency key.
+rate_limiting:
+  signaled: true
+  note: Services API returns HTTP 429 on rate limiting; no documented headers.
+pagination:
+  note: Not applicable to the verification/identity surface (no list-collection endpoints documented).
+notes: >-
+  Cross-links: authentication/idme-authentication.yml, errors/idme-problem-types.yml,
+  lifecycle/idme-lifecycle.yml, asyncapi/idme-services-webhooks.yml.

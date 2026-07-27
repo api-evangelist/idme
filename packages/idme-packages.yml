@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source:
+- https://github.com/IDme
+- https://docs.id.me/guides/mobile-sdk/overview
+packages:
+- language: swift
+  registry: cocoapods
+  name: IDmeWebVerify
+  url: https://cocoapods.org/pods/IDmeWebVerify
+  install: pod 'IDmeWebVerify'
+  version: 4.0.1
+  official: true
+  repo: https://github.com/IDme/ID.me-WebVerify-SDK-iOS
+  note: Official iOS WebVerify SDK (CocoaPods owner "ID.me").
+- language: java
+  registry: github
+  name: ID.me-WebVerify-SDK-Android
+  url: https://github.com/IDme/ID.me-WebVerify-SDK-Android
+  install: See repo (AAR / Gradle)
+  official: true
+  note: Official Android WebVerify SDK for group-affiliation verification.
+- language: kotlin-swift
+  registry: github
+  name: idme-mobilesdk-artifacts
+  url: https://github.com/IDme/idme-mobilesdk-artifacts
+  official: true
+  note: Distribution artifacts of ID.me's native iOS and Android Mobile SDKs.
+- language: ruby
+  registry: rubygems
+  name: omniauth-idme
+  url: https://rubygems.org/gems/omniauth-idme
+  install: gem install omniauth-idme
+  version: 1.0.0
+  official: true
+  repo: https://github.com/IDme/omniauth-idme
+  note: Official OmniAuth strategy for ID.me OAuth.
+sample_code:
+  note: >-
+    ID.me also publishes non-package sample-code repos under github.com/IDme
+    (python-sample-code, PHP-sample-code, ruby-sample-code, javascript-sample-code,
+    jquery-sample-code, react-axios-sample-code, ruby-oidc-sample-code,
+    ios-auth-sample-code, android-auth-sample-code, and encryption samples for
+    Python/Node/ASP.NET). These are integration examples, not published packages.

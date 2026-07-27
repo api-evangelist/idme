@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.id.me/services-api-overview
+versioning:
+  scheme: uri-path
+  oidc_api: v3 (userinfo at /api/public/v3/userinfo)
+  services_api: v2 (transactions at /api/v2/:product/:transaction_id)
+  docs: https://docs.id.me/guides/oidc/overview
+token_lifecycle:
+  docs: https://docs.id.me/integrations/configurations/applications/token-expiration
+  refresh_token: true
+  authorization_duration_configurable: true
+  session_length_configurable: true
+status_page: https://status.id.me
+status_page_alt: https://idme.statuspage.io
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation policy or RFC 8594 Sunset header support found in docs.
+sla:
+  url: null
+notes: >-
+  ID.me operates a public Statuspage at status.id.me. No dated developer changelog
+  or formal API deprecation policy was found on docs.id.me during this pass.

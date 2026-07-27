@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of ID.me hosts
+hosts:
+- host: https://api.id.me
+  documents:
+  - path: /oidc/.well-known/openid-configuration
+    status: 200
+    file: idme-openid-configuration.json
+  - path: /oidc/.well-known/jwks
+    status: 200
+  - path: /.well-known/security.txt
+    status: 200
+    file: idme-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://www.id.me
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: canonical security.txt (403 to bots; Canonical target of api.id.me copy)
+notes: >-
+  ID.me publishes OIDC discovery under the /oidc path (issuer https://api.id.me/oidc),
+  not at the host root. The security.txt served at api.id.me declares its Canonical
+  as https://www.id.me/.well-known/security.txt.

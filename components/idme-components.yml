@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.id.me/brand-assets/brand-assets/button-widget
+families:
+- family: Button Widget
+  kind: embeddable-button
+  description: >-
+    ID.me "Sign In / Verify / Continue" button widget for embedding the identity
+    verification entry point in web pages, with brand-approved variants.
+  docs: https://docs.id.me/brand-assets/brand-assets/button-widget
+  brand_guidelines: https://docs.id.me/brand-assets/brand-assets/brand-guidelines
+- family: Conversion Tracking SDK
+  kind: client-side-sdk
+  description: >-
+    Client-side conversion tracking that attributes completed orders back to
+    ID.me verification events, used with the button widget.
+  docs: https://docs.id.me/guides/o-auth-2-0/conversion-tracking
+- family: Mobile SDK (Communities)
+  kind: native-embedded
+  description: >-
+    iOS and Android Communities SDKs that launch the ID.me verification flow via
+    Chrome Custom Tabs / native web verify for in-app identity verification.
+  docs: https://docs.id.me/guides/mobile-sdk/overview
+notes: >-
+  Client-side/embeddable surfaces, distinct from the server-side SDKs catalogued
+  in packages/idme-packages.yml.

@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.id.me/services-api/test-personas
+docs:
+- https://docs.id.me/services-api/mock-apis-and-testing-tokens
+- https://docs.id.me/services-api/test-personas
+- https://docs.id.me/integrations/deploy-and-monitor/quality-assurance-testing
+environments:
+  sandbox_host: https://services.idmelabs.com
+  note: >-
+    idmelabs.com is the ID.me sandbox/labs domain. Test personas and testing
+    tokens exercise the Services API without real personal data.
+test_personas:
+  note: >-
+    Pre-configured personas for the Telecom Identity endpoint. Save verbatim from
+    docs; each is {phone, birth_date, name/outcome}.
+  success:
+  - {phone: '8889413032', birth_date: '1942-07-09', name: Veronica Persinger}
+  - {phone: '8887891962', birth_date: '1956-10-24', name: Laurene Hoppe}
+  - {phone: '8883455009', birth_date: '1964-07-07', name: Michelle Crona}
+  - {phone: '8884725021', birth_date: '1969-04-02', name: Emmett Sawayn}
+  - {phone: '8888752626', birth_date: '1970-03-12', name: Marcy Hansen}
+  - {phone: '8886272447', birth_date: '1989-10-16', name: Carrol Haag}
+  - {phone: '8889459473', birth_date: '1993-03-08', name: Prudence Crist}
+  - {phone: '8889451615', birth_date: '1998-07-18', name: Moses Littel}
+  failure_scenarios:
+  - {phone: '8889413031', birth_date: '1974-09-27', outcome: Expired response}
+  - {phone: '3055557728', birth_date: '1977-03-09', outcome: Fraud flag detected}
+  - {phone: '3055551190', birth_date: '1977-03-09', outcome: Unsupported document type}
+  - {phone: '8884175429', birth_date: '1987-12-08', outcome: Expired document}
+  - {phone: '8885118708', birth_date: '1968-07-31', outcome: User is a minor (under 18)}
+  - {phone: '8887804798', birth_date: '1999-05-10', outcome: Document recapture required}
+  - {phone: '8886733437', birth_date: '1992-03-07', outcome: Foreign passport}
+  - {phone: '8884833570', birth_date: '1969-04-02', outcome: Vendor fallback}
+  - {phone: '8885331659', birth_date: '1962-11-17', outcome: Poor image quality (bad OCR)}
+  - {phone: '8886250610', birth_date: '1971-11-26', outcome: Front/back document mismatch}
+  - {phone: '8885886876', birth_date: '1992-03-09', outcome: Failed response}
+  - {phone: '8888184550', birth_date: '1986-04-27', outcome: Invalid document issuer}
+tooling:
+  mock_apis: https://docs.id.me/services-api/mock-apis-and-testing-tokens
+  testing_tokens: Documented for Services API integration testing.
+notes: >-
+  Values published verbatim by ID.me for sandbox testing only. Never use in
+  production; these are not real identities.

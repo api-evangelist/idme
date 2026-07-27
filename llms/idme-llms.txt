@@ -1,0 +1,98 @@
+# ID.me Developer
+
+## Instructions for AI Agents
+
+- For clean Markdown of any page, append `.md` to the page URL
+- For section-specific indexes, append `/llms.txt` to any section URL
+- For AI client integration (Claude Code, Cursor, etc.), connect to the MCP server at https://docs.id.me/_mcp/server
+
+## Docs
+
+- [](https://docs.id.me/home.md): Get started with ID.me
+- [Overview](https://docs.id.me/integrations/supported-applications/overview.md): Seamless platform integration with ID.me
+- [Shopify](https://docs.id.me/integrations/supported-applications/shopify.md): ID.me Shopify extension
+- [Azure](https://docs.id.me/integrations/supported-applications/azure.md): Configure ID.me on Azure
+- [Overview](https://docs.id.me/integrations/configurations/overview.md): Overview of the available configurations
+- [Standard scope and AuthN context values](https://docs.id.me/integrations/configurations/configuration-standards.md): Standard scope and AuthN context values
+- [Redirect URIs](https://docs.id.me/integrations/configurations/applications/redirect-ur-is.md): Information on redirect URIs
+- [Language localization](https://docs.id.me/integrations/configurations/applications/language-localization.md): Learn about language localization options
+- [Privacy policy and terms of service (ToS) URIs](https://docs.id.me/integrations/configurations/applications/privacy-terms-of-service.md): Learn about privacy policy and terms of service (ToS) URIs
+- [Authorization duration](https://docs.id.me/integrations/configurations/applications/authorization-duration.md): Learn about authorization duration
+- [Token expiration](https://docs.id.me/integrations/configurations/applications/token-expiration.md): Learn about token expiration
+- [Session length](https://docs.id.me/integrations/configurations/applications/session-length.md): Learn about session length
+- [Multi-factor authentication (MFA) options](https://docs.id.me/integrations/configurations/policies/mfa-options.md): MFA options
+- [User properties](https://docs.id.me/integrations/configurations/policies/user-properties.md): Learn about user properties
+- [Overview](https://docs.id.me/integrations/deploy-and-monitor/overview.md): Learn more about deploying and monitoring your applications
+- [Quality assurance testing](https://docs.id.me/integrations/deploy-and-monitor/quality-assurance-testing.md): Learn more about quality assurance testing
+- [Launching in production](https://docs.id.me/integrations/deploy-and-monitor/launching-in-production.md): Learn more about launching in production
+- [Monitoring performance](https://docs.id.me/integrations/deploy-and-monitor/monitoring-performance.md): Learn more about how you can monitor performance
+- [Have a question? We're here to help!](https://docs.id.me/integrations/deploy-and-monitor/help.md): Get the help you need
+- [Overview](https://docs.id.me/integrations/sample-code/overview.md): Sample code library
+- [Python](https://docs.id.me/integrations/sample-code/options/python.md): Learn more about integrating using Python
+- [PHP](https://docs.id.me/integrations/sample-code/options/php.md): Learn more about integrating using PHP
+- [Ruby](https://docs.id.me/integrations/sample-code/options/ruby.md): Learn more about integrating using Ruby
+- [Ruby on Rails](https://docs.id.me/integrations/sample-code/options/ruby-on-rails.md): Learn more about integrating using Ruby on Rails
+- [React Axios](https://docs.id.me/integrations/sample-code/options/react-axios.md): Learn more about integrating using React Axios
+- [JavaScript](https://docs.id.me/integrations/sample-code/options/java-script.md): Learn more about integrating using JavaScript
+- [jQuery](https://docs.id.me/integrations/sample-code/options/j-query.md): Learn more about integrating using jQuery
+- [OIDC Ruby](https://docs.id.me/integrations/sample-code/options/oidc-ruby.md): Learn more about integrating using OIDC with Ruby
+- [Developer sandbox agreement](https://docs.id.me/developer_terms.md): IDme developer terms of service
+- [Partner terms of service](https://docs.id.me/partner_terms.md): IDme developer terms of service
+- [Overview](https://docs.id.me/guides/overview.md): Guides for integrating and building with ID.me
+- [AWS Cognito OIDC integration guide](https://docs.id.me/guides/iam-platforms/aws/cognito/oidc.md): Configure AWS Cognito to use ID.me as an OpenID Connect identity provider for federated authentication.
+- [Keycloak OIDC integration guide](https://docs.id.me/guides/iam-platforms/keycloak/oidc.md): Configure Keycloak to use ID.me as an OpenID Connect identity provider for federated authentication.
+- [Keycloak SAML integration guide](https://docs.id.me/guides/iam-platforms/keycloak/saml.md): Configure Keycloak to use ID.me as a SAML 2.0 identity provider for federated authentication.
+- [Microsoft Entra External ID OIDC integration guide](https://docs.id.me/guides/iam-platforms/microsoft/entra-external-id/oidc.md): Configure Microsoft Entra External ID to use ID.me as an OpenID Connect identity provider for federated authentication.
+- [Okta OIDC integration guide](https://docs.id.me/guides/iam-platforms/okta/workforce-identity-cloud/oidc.md): Configure Okta to use ID.me as an OpenID Connect identity provider.
+- [Okta](https://docs.id.me/guides/iam-platforms/okta/workforce-identity-cloud/saml.md): Configure Okta to use ID.me as a SAML 2.0 identity provider for federated authentication.
+- [PingOne OIDC integration guide](https://docs.id.me/guides/iam-platforms/ping-identity.md): Configure PingOne to use ID.me as an OpenID Connect identity provider for federated authentication.
+- [Overview](https://docs.id.me/guides/oidc/overview.md): OpenID Connect
+- [Configuration](https://docs.id.me/guides/open-id-connect/configuration.md): Configure your application's OIDC settings for integration with ID.me, including redirect URIs, scopes, and required credentials.
+- [Integration](https://docs.id.me/guides/open-id-connect/integration.md): Integrate OpenID Connect with ID.me by setting up your developer account, evaluating well-known endpoints, and completing the authorization flow.
+- [Best practices](https://docs.id.me/guides/open-id-connect/best-practices.md): Best practices for matching user attributes, storing ID.me UUIDs, and handling identity data in your OIDC integration.
+- [PKCE](https://docs.id.me/guides/oidc/pkce.md): Implement Authorization Code Flow with Proof Key for Code Exchange (PKCE)
+- [Overview](https://docs.id.me/guides/saml/overview.md): SAML 2.0 overview
+- [Configuration](https://docs.id.me/guides/saml/configuration.md): SAML 2.0 configuration
+- [Integration](https://docs.id.me/guides/saml/integration.md): SAML 2.0 integration steps
+- [Best practices](https://docs.id.me/guides/saml/best-practices.md): SAML 2.0 best practices
+- [Overview](https://docs.id.me/guides/o-auth-2-0/overview.md): OAuth 2.0
+- [Integration](https://docs.id.me/guides/o-auth-2-0/integration.md): Step-by-step guide to integrating ID.me's OAuth 2.0 authorization code flow into your application.
+- [PKCE](https://docs.id.me/guides/o-auth-2-0/pkce.md): Implement OAuth 2.0 Authorization Code Flow with PKCE for secure identity verification using ID.me.
+- [ID.me Community Verification: payload reference](https://docs.id.me/guides/o-auth-2-0/community-group-payloads.md): Reference list of community group and subgroup payloads returned by ID.me during OAuth 2.0 verification.
+- [Android communities SDK](https://docs.id.me/guides/mobile-sdk/android-communities-sdk.md): Integrate the ID.me Android Communities SDK into your Android app to enable identity verification using Chrome Custom Tabs.
+- [iOS communities SDK](https://docs.id.me/guides/mobile-sdk/ios-communities-sdk.md): Integrate the ID.me iOS Communities SDK into your iOS app to enable identity verification flows.
+- [Conversion Tracking](https://docs.id.me/guides/o-auth-2-0/conversion-tracking.md): Attribute completed orders back to ID.me verification events using the button widget and conversion tracking SDK.
+- [Error codes](https://docs.id.me/guides/o-auth-2-0/error-codes.md): OAuth 2.0 error codes
+- [Overview](https://docs.id.me/guides/shared-signals-framework/ssf-overview.md): Overview of the ID.me Shared Signals Framework (SSF) for near real-time exchange of security events between ID.me and relying parties.
+- [Fraud event notifications](https://docs.id.me/shared-signals-framework/fraud-event-notifications.md): Register your application to receive ID.me Shared Signals Framework (SSF) security events via HTTPS push delivery.
+- [User verification events](https://docs.id.me/shared-signals-framework/user-verification-events.md): Subscribe your application to receive real-time user verification events from ID.me.
+- [Audit logs](https://docs.id.me/shared-signals-framework/audit-logs.md): Audit log events for ID.me user actions. Coming soon.
+- [Overview](https://docs.id.me/guides/mobile-sdk/overview.md): Learn how to integrate and use ID.me's native SDK for iOS and Android
+- [Android SDK](https://docs.id.me/guides/mobile-sdk/android.md): Learn how to integrate and use ID.me's native SDK for Android
+- [iOS SDK](https://docs.id.me/guides/mobile-sdk/i-os.md): Learn how to integrate and use ID.me's native SDK for iOS
+- [Mobile SDK video demos](https://docs.id.me/guides/mobile-sdk/video-demos.md): Demo videos showing ID.me Mobile SDK identity verification flows for passports and driver's licenses on iOS and Android.
+- [Applications API](https://docs.id.me/guides/applications-api/developer-guide.md): Create and manage ID.me applications via the Applications API to enable application-level tracking and reporting.
+- [Document passback API](https://docs.id.me/guides/api/document-passback-api.md): Retrieve images of identity documents verified through ID.me using the Document Passback API.
+- [Overview](https://docs.id.me/services-api-overview.md): Introduction to the ID.me Services API, including authorization, error handling, and the health check endpoint.
+- [Verification](https://docs.id.me/services-api/verification.md): Create and manage verifications to track identity attempts across multiple products using the Services API.
+- [Telecom](https://docs.id.me/services-api/telecom.md): Verify phone possession and identity using the Services API telecom endpoints.
+- [Documents](https://docs.id.me/services-api/documents.md): Verify identity documents including driver's licenses, passports, and passcards using the Services API.
+- [Mock APIs and testing tokens](https://docs.id.me/services-api/mock-apis-and-testing-tokens.md): Test your Services API integration using mock APIs and testing tokens before going live with real data.
+- [Webhooks](https://docs.id.me/services-api/webhooks.md): Receive real-time transaction results via webhooks configured on your ID.me organization account.
+- [Test personas](https://docs.id.me/services-api/test-personas.md): Pre-configured test personas for validating your Services API integration in sandbox without using real personal information.
+- [Introduction](https://docs.id.me/guides/learn-more/work-authentication/introduction.md): Introduction to Work Authentication
+- [Create an ID.me account](https://docs.id.me/guides/learn-more/work-authentication/create-an-id-me-account.md): Create an ID.me account to start using Work Authentication
+- [Use an existing account](https://docs.id.me/guides/learn-more/work-authentication/use-an-existing-account.md): Sign in to an existing ID.me account
+- [Managing team members](https://docs.id.me/guides/business-user-authentication/developer-portal/managing-team-members.md): Invite and manage team members in your ID.me Developer Portal organization as an Administrator.
+- [Overview](https://docs.id.me/guides/learn-more/identity-gateway/overview.md): Learn about the ID.me Identity Gateway
+- [Overview](https://docs.id.me/guides/learn-more/digital-wallet/overview.md): Learn about the ID.me Digital Wallet and Credential Broker
+- [MFA](https://docs.id.me/guides/learn-more/digital-wallet/multi-factor-authentication.md): Learn about MFA
+- [KBA-R](https://docs.id.me/guides/learn-more/digital-wallet/knowledge-based-authentication.md): Learn about KBA
+- [Fortified identity](https://docs.id.me/guides/learn-more/digital-wallet/fortified-identity.md): Learn about fortified identity
+- [NIST IAL2](https://docs.id.me/guides/learn-more/digital-wallet/nist-ial-2.md): Learn about NIST IAL2
+- [TEFCA Individual Access Services (IAS) integration guide](https://docs.id.me/guides/learn-more/digital-wallet/tefca-individual-access-services.md): Configure your application to support TEFCA Individual Access Services with ID.me as the IAL2-verified credential service provider.
+- [Overview](https://docs.id.me/guides/learn-more/attributes-exchange/overview.md): Learn about the ID.me Attributes Exchange
+- [Attribute matching](https://docs.id.me/att-matching.md): Learn about attribute matching
+- [Language support](https://docs.id.me/guides/learn-more/language-support.md): Configure your ID.me integration to present verification flows in a user's preferred language.
+- [Brand Guidelines](https://docs.id.me/brand-assets/brand-assets/brand-guidelines.md): Rules and downloadable assets for using the ID.me brand, including logo variants (Navy, White) and Sign In, Verify, and Continue button variants in multiple color options.
+- [Button Widget](https://docs.id.me/brand-assets/brand-assets/button-widget.md): How to use the ID.me button widget
