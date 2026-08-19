@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "idme",
+    "captured_at": "2026-08-17T123853",
+    "source_url": "https://id.me",
+    "source_type": "root-domain",
+    "file": "idme-2026-08-17T123853.png",
+    "bytes": 418414,
+    "capture": "playwright-local"
+  }
+]
