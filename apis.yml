@@ -42,6 +42,18 @@ tags:
 - Identity Verification
 - Authentication
 - OpenID Connect
+- SAML
+- Single Sign-On
+- Digital Identity
+- KYC
+- Fraud Prevention
+- Government
+tags_raw:
+- Company
+- Identity
+- Identity Verification
+- Authentication
+- OpenID Connect
 - OAuth 2.0
 - SAML
 - Single Sign-On
@@ -60,6 +72,10 @@ apis:
   humanURL: https://docs.id.me/guides/oidc/overview
   baseURL: https://api.id.me
   tags:
+  - OpenID Connect
+  - Authentication
+  - Identity Verification
+  tags_raw:
   - OpenID Connect
   - OAuth 2.0
   - Authentication
