@@ -1,18 +1,14 @@
 aid: idme
 name: ID.me
-description: >-
-  ID.me is a digital identity network that provides NIST 800-63-3 IAL2/AAL2
-  identity verification, single sign-on, and group affiliation (community)
-  verification for government agencies, healthcare, and commercial partners.
-  For developers, ID.me exposes an OpenID Connect and OAuth 2.0 identity
-  provider (authorization code flow with PKCE, plus SAML 2.0 federation), a
-  REST Services API for telecom and document verification, an Applications API,
-  a Document Passback API, and a Shared Signals Framework (SSF) event stream for
-  fraud and verification signals. Native iOS and Android SDKs, a button widget,
-  conversion tracking, and multi-language sample code round out the developer
-  surface, letting relying parties add strong identity proofing and attribute
-  exchange to any application or IAM platform (Okta, Keycloak, Entra, PingOne,
-  AWS Cognito).
+description: ID.me is a digital identity network that provides NIST 800-63-3 IAL2/AAL2 identity verification,
+  single sign-on, and group affiliation (community) verification for government agencies, healthcare,
+  and commercial partners. For developers, ID.me exposes an OpenID Connect and OAuth 2.0 identity provider
+  (authorization code flow with PKCE, plus SAML 2.0 federation), a REST Services API for telecom and document
+  verification, an Applications API, a Document Passback API, and a Shared Signals Framework (SSF) event
+  stream for fraud and verification signals. Native iOS and Android SDKs, a button widget, conversion
+  tracking, and multi-language sample code round out the developer surface, letting relying parties add
+  strong identity proofing and attribute exchange to any application or IAM platform (Okta, Keycloak,
+  Entra, PingOne, AWS Cognito).
 url: https://raw.githubusercontent.com/api-evangelist/idme/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -46,7 +42,7 @@ accessModel:
 image: https://avatars.githubusercontent.com/u/295660?v=4
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-09-16'
 tags:
 - Company
 - Identity
@@ -59,6 +55,7 @@ tags:
 - KYC
 - Fraud Prevention
 - Government
+- Identity Federation
 tags_raw:
 - Company
 - Identity
@@ -72,13 +69,12 @@ tags_raw:
 - KYC
 - Fraud Prevention
 - Government
+- Identity Federation
 apis:
 - name: ID.me OpenID Connect & OAuth 2.0 API
-  description: >-
-    ID.me's OpenID Connect and OAuth 2.0 identity provider. Supports the
-    authorization code flow (with PKCE), refresh tokens, encrypted ID tokens and
-    userinfo, and returns verified identity attributes and community/group
-    affiliation (military, responder, student, teacher, government, employee,
+  description: ID.me's OpenID Connect and OAuth 2.0 identity provider. Supports the authorization code
+    flow (with PKCE), refresh tokens, encrypted ID tokens and userinfo, and returns verified identity
+    attributes and community/group affiliation (military, responder, student, teacher, government, employee,
     etc.) after a user completes identity verification.
   humanURL: https://docs.id.me/guides/oidc/overview
   baseURL: https://api.id.me
@@ -105,12 +101,10 @@ apis:
   - type: ErrorCatalog
     url: errors/idme-problem-types.yml
 - name: ID.me Services API
-  description: >-
-    ID.me's REST Services API for orchestrating identity verification: create
-    and manage verifications, verify phone possession and identity via telecom
-    endpoints, and verify identity documents (driver's licenses, passports,
-    passport cards). Delivers real-time transaction results via webhooks and a
-    sandbox of pre-configured test personas.
+  description: 'ID.me''s REST Services API for orchestrating identity verification: create and manage
+    verifications, verify phone possession and identity via telecom endpoints, and verify identity documents
+    (driver''s licenses, passports, passport cards). Delivers real-time transaction results via webhooks
+    and a sandbox of pre-configured test personas.'
   humanURL: https://docs.id.me/services-api-overview
   baseURL: https://services.idmelabs.com
   tags:
