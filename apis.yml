@@ -110,6 +110,11 @@ apis:
   tags:
   - Identity Verification
   - Documents
+  - Telecommunications
+  - KYC
+  tags_raw:
+  - Identity Verification
+  - Documents
   - Telecom
   - KYC
   properties:
