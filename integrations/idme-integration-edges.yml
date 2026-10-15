@@ -1,6 +1,9 @@
 generated: '2026-10-14'
 method: searched
 checked:
+- https://kantarainitiative.org/trust-status-list/
+- https://msb.fincen.gov/
+- https://www.access-dvs-register.service.gov.uk/register/download-register
 - ping-identity/integrations/ping-identity-integration-edges.yml
 source:
 - ping-identity/integrations/ping-identity-integration-edges.yml
@@ -23,3 +26,40 @@ edges:
   listing_count: 3
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
+- partner_name: Kantara Initiative (Trust Status List)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://kantarainitiative.org/trust-status-list/
+  category: Identity assurance certification
+  contract_reference:
+    register: Kantara Initiative Trust Status List (kantarainitiative.org/trust-status-list)
+    spec_file: null
+    standard: Kantara Identity Assurance (NIST SP 800-63)
+    role: kantara-approved-service
+    registered_name: ID.me
+    register_id: ID.me
+    website: https://www.ID.me
+    matched_domain: id.me
+    matched_by: domain
+    kantara_services:
+    - service: Identity Gateway
+      scheme: NIST 800-63 rev.3
+      assurance_levels: IAL2; AAL2
+      status: Good Standing - Affirmed 2026
+      approval: IAF-Approval-25.06.KI
+      expiry: '2028-06-30'
+      table: full_services
+    signal_note: certified_products = one entry per approved service TYPE (Full / Component / Classic), lapsed unless
+      Good Standing and inside the triennial approval; registered applicants are participation only; services and
+      assurance levels are context
+    detected_by: sweep-regtech-aml.py
+    detected: '2026-10-15'
+    certified_products:
+    - product: Full Service
+      lapsed: false
+  detected_by: sweep-regtech-aml.py
+  first_seen: '2026-10-15'
