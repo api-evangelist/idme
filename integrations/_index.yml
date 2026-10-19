@@ -120,3 +120,34 @@
     detected: '2026-10-15'
   status: not-a-workflow
   arazzo: null
+- slug: idme-rubygems
+  label: RubyGems
+  partner: rubygems
+  partner_name: RubyGems
+  category: official SDK (Ruby)
+  type: register
+  channel: package-registry
+  evidence: https://rubygems.org/gems/omniauth-idme
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: RubyGems (public registry JSON)
+    spec_file: null
+    language: Ruby
+    packages:
+    - name: omniauth-idme
+      version: 1.0.0
+      released: '2015-09-03'
+      released_field: version_created_at
+      lapsed: true
+      page: https://rubygems.org/gems/omniauth-idme
+      repo_leg: github-org:idme
+      publisher_leg: org:idme
+      matched_by: github-org
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
