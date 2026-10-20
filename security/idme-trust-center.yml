@@ -1,0 +1,19 @@
+generated: '2026-10-20'
+method: searched
+probe: true
+source: https://www.id.me/security
+url: https://www.id.me/security
+certifications:
+- SOC 2
+- ISO 27001
+- FedRAMP
+- GDPR
+- FIPS 140
+evidence:
+- source: https://www.id.me/security
+  keywords:
+  - soc 2
+  - soc2
+  - iso 27001
+  - fedramp
+  - gdpr

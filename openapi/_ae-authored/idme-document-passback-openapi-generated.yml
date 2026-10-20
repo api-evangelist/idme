@@ -1,0 +1,139 @@
+openapi: 3.1.0
+info:
+  title: ID.me document passback API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 3 operation(s)
+    read from 1 public documentation page(s) (each operation names its page in x-source).
+    This is not the provider''s published contract; ID.me has published no machine-readable
+    contract that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 9
+    documentation: 19
+    pages-with-code: 8
+    pages-read: 16
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://docs.id.me/apis/document-passback-api/overview
+  x-docs-section: document-passback-api
+servers:
+- url: https://api.id.me
+  description: Production (docs.id.me overview)
+- url: https://api.idmelabs.com
+  description: Sandbox (docs.id.me overview)
+paths:
+  /api/public/v3/attributes.json:
+    get:
+      operationId: get_api_public_v3_attributes_json
+      tags:
+      - Api
+      summary: Get document tokens from the attributes endpoint with a valid access
+        token.
+      x-source: https://docs.id.me/apis/document-passback-api/overview
+      parameters:
+      - name: access_token
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiPublicV3AttributesJsonResponse'
+      x-evidence:
+        kind: documentation
+  /api/public/v3/documents/refresh/{documentToken}:
+    post:
+      operationId: post_api_public_v3_documents_refresh_documentToken
+      tags:
+      - Api
+      summary: Generate a new document token without requiring a new user session.
+      x-source: https://docs.id.me/apis/document-passback-api/overview
+      parameters:
+      - name: documentToken
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: token
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiPublicV3DocumentsRefreshDocumenttokenResponse'
+      x-evidence:
+        kind: documentation
+  /api/public/v3/documents/{documentToken}:
+    post:
+      operationId: post_api_public_v3_documents_documentToken
+      tags:
+      - Api
+      summary: Retrieve the document image using the document token and API token.
+      x-source: https://docs.id.me/apis/document-passback-api/overview
+      parameters:
+      - name: documentToken
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: token
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: size
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiPublicV3DocumentsDocumenttokenResponse'
+      x-evidence:
+        kind: documentation
+security:
+- bearer: []
+components:
+  schemas:
+    GetApiPublicV3AttributesJsonResponse:
+      type: object
+      properties:
+        handle:
+          type: string
+        name:
+          type: string
+        value:
+          type: object
+    PostApiPublicV3DocumentsRefreshDocumenttokenResponse:
+      type: object
+      properties:
+        document_token:
+          type: string
+    PostApiPublicV3DocumentsDocumenttokenResponse:
+      type: object
+      properties:
+        image:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+tags:
+- name: Api

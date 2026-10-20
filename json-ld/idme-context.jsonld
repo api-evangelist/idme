@@ -1,0 +1,263 @@
+{
+  "@context": {
+    "@vocab": "https://id.me/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "idme": "https://id.me/schema#",
+    "PostApiAuthV1CredentialsUuidCheckResponse": "idme:PostApiAuthV1CredentialsUuidCheckResponse",
+    "verified": {
+      "@id": "idme:verified",
+      "@type": "xsd:boolean"
+    },
+    "GetApiPublicV3AttributesJsonResponse": "idme:GetApiPublicV3AttributesJsonResponse",
+    "handle": {
+      "@id": "idme:handle",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "idme:name",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "idme:value"
+    },
+    "PostApiPublicV3DocumentsRefreshDocumenttokenResponse": "idme:PostApiPublicV3DocumentsRefreshDocumenttokenResponse",
+    "document_token": {
+      "@id": "idme:document_token",
+      "@type": "xsd:string"
+    },
+    "PostApiPublicV3DocumentsDocumenttokenResponse": "idme:PostApiPublicV3DocumentsDocumenttokenResponse",
+    "image": {
+      "@id": "idme:image",
+      "@type": "xsd:string"
+    },
+    "GetApiV2ProductTransactionidResponse": "idme:GetApiV2ProductTransactionidResponse",
+    "transaction_id": {
+      "@id": "idme:transaction_id",
+      "@type": "xsd:string"
+    },
+    "verification_id": {
+      "@id": "idme:verification_id",
+      "@type": "xsd:string"
+    },
+    "product": {
+      "@id": "idme:product",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "idme:status"
+    },
+    "GetApiV2DocumentLicenseVerifyResponse": "idme:GetApiV2DocumentLicenseVerifyResponse",
+    "PostApiV2DocumentLicenseVerifyRequest": "idme:PostApiV2DocumentLicenseVerifyRequest",
+    "front_image": {
+      "@id": "idme:front_image",
+      "@type": "xsd:string"
+    },
+    "back_image": {
+      "@id": "idme:back_image",
+      "@type": "xsd:string"
+    },
+    "callback_url": {
+      "@id": "idme:callback_url",
+      "@type": "xsd:string"
+    },
+    "metadata": {
+      "@id": "idme:metadata",
+      "@type": "xsd:string"
+    },
+    "PostApiV2DocumentLicenseVerifyResponse": "idme:PostApiV2DocumentLicenseVerifyResponse",
+    "GetApiV2DocumentPasscardVerifyResponse": "idme:GetApiV2DocumentPasscardVerifyResponse",
+    "PostApiV2DocumentPasscardVerifyRequest": "idme:PostApiV2DocumentPasscardVerifyRequest",
+    "PostApiV2DocumentPasscardVerifyResponse": "idme:PostApiV2DocumentPasscardVerifyResponse",
+    "GetApiV2DocumentPassportVerifyResponse": "idme:GetApiV2DocumentPassportVerifyResponse",
+    "PostApiV2DocumentPassportVerifyRequest": "idme:PostApiV2DocumentPassportVerifyRequest",
+    "PostApiV2DocumentPassportVerifyResponse": "idme:PostApiV2DocumentPassportVerifyResponse",
+    "PostApiV2TelecomIdentityRequest": "idme:PostApiV2TelecomIdentityRequest",
+    "phone": {
+      "@id": "idme:phone",
+      "@type": "xsd:string"
+    },
+    "birth_date": {
+      "@id": "idme:birth_date",
+      "@type": "xsd:string"
+    },
+    "PostApiV2TelecomIdentityResponse": "idme:PostApiV2TelecomIdentityResponse",
+    "PostApiV2TelecomPossessionSmsConfirmRequest": "idme:PostApiV2TelecomPossessionSmsConfirmRequest",
+    "code": {
+      "@id": "idme:code",
+      "@type": "xsd:string"
+    },
+    "PostApiV2TelecomPossessionSmsConfirmResponse": "idme:PostApiV2TelecomPossessionSmsConfirmResponse",
+    "result": {
+      "@id": "idme:result"
+    },
+    "GetApiV2TelecomPossessionSmsSendResponse": "idme:GetApiV2TelecomPossessionSmsSendResponse",
+    "PostApiV2TelecomPossessionSmsSendRequest": "idme:PostApiV2TelecomPossessionSmsSendRequest",
+    "PostApiV2TelecomPossessionSmsSendResponse": "idme:PostApiV2TelecomPossessionSmsSendResponse",
+    "PostApiV2VerificationResponse": "idme:PostApiV2VerificationResponse",
+    "GetV1ApplicationsApplicationuuidResponse": "idme:GetV1ApplicationsApplicationuuidResponse",
+    "uuid": {
+      "@id": "idme:uuid",
+      "@type": "xsd:string"
+    },
+    "PatchV1ApplicationsApplicationuuidRequest": "idme:PatchV1ApplicationsApplicationuuidRequest",
+    "class": {
+      "@id": "idme:class",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "idme:type",
+      "@type": "xsd:string"
+    },
+    "subtype": {
+      "@id": "idme:subtype",
+      "@type": "xsd:string"
+    },
+    "architectureType": {
+      "@id": "idme:architectureType",
+      "@type": "xsd:string"
+    },
+    "operatingSystem": {
+      "@id": "idme:operatingSystem",
+      "@type": "xsd:string"
+    },
+    "deviceTypes": {
+      "@id": "idme:deviceTypes",
+      "@type": "xsd:string"
+    },
+    "userTypes": {
+      "@id": "idme:userTypes",
+      "@type": "xsd:string"
+    },
+    "PatchV1ApplicationsApplicationuuidResponse": "idme:PatchV1ApplicationsApplicationuuidResponse",
+    "PostV1DomainsRequest": "idme:PostV1DomainsRequest",
+    "domainName": {
+      "@id": "idme:domainName",
+      "@type": "xsd:string"
+    },
+    "PostV1DomainsResponse": "idme:PostV1DomainsResponse",
+    "organizationUuid": {
+      "@id": "idme:organizationUuid",
+      "@type": "xsd:string"
+    },
+    "validationSource": {
+      "@id": "idme:validationSource",
+      "@type": "xsd:string"
+    },
+    "registrantName": {
+      "@id": "idme:registrantName",
+      "@type": "xsd:string"
+    },
+    "registrar": {
+      "@id": "idme:registrar",
+      "@type": "xsd:string"
+    },
+    "registry": {
+      "@id": "idme:registry",
+      "@type": "xsd:string"
+    },
+    "GetV1DomainsDomainResponse": "idme:GetV1DomainsDomainResponse",
+    "registeredAt": {
+      "@id": "idme:registeredAt",
+      "@type": "xsd:string"
+    },
+    "expiresAt": {
+      "@id": "idme:expiresAt",
+      "@type": "xsd:string"
+    },
+    "GetV1JurisdictionsAutocompleteResponse": "idme:GetV1JurisdictionsAutocompleteResponse",
+    "data": {
+      "@id": "idme:data",
+      "@container": "@list"
+    },
+    "GetV1OrganizationsOrganizationuuidApplicationsResponse": "idme:GetV1OrganizationsOrganizationuuidApplicationsResponse",
+    "applications": {
+      "@id": "idme:applications",
+      "@container": "@list"
+    },
+    "PostV1OrganizationsOrganizationuuidApplicationsRequest": "idme:PostV1OrganizationsOrganizationuuidApplicationsRequest",
+    "claimantUuid": {
+      "@id": "idme:claimantUuid",
+      "@type": "xsd:string"
+    },
+    "consumerUuid": {
+      "@id": "idme:consumerUuid",
+      "@type": "xsd:string"
+    },
+    "PostV1OrganizationsOrganizationuuidApplicationsResponse": "idme:PostV1OrganizationsOrganizationuuidApplicationsResponse",
+    "PatchV1OrganizationsUuidRequest": "idme:PatchV1OrganizationsUuidRequest",
+    "logoUrl": {
+      "@id": "idme:logoUrl",
+      "@type": "xsd:string"
+    },
+    "doingBusinessAsNames": {
+      "@id": "idme:doingBusinessAsNames",
+      "@container": "@list"
+    },
+    "dateOfFormation": {
+      "@id": "idme:dateOfFormation",
+      "@type": "xsd:string"
+    },
+    "ein": {
+      "@id": "idme:ein",
+      "@type": "xsd:string"
+    },
+    "duns": {
+      "@id": "idme:duns",
+      "@type": "xsd:string"
+    },
+    "uei": {
+      "@id": "idme:uei",
+      "@type": "xsd:string"
+    },
+    "primaryAddress": {
+      "@id": "idme:primaryAddress"
+    },
+    "officeAddress": {
+      "@id": "idme:officeAddress"
+    },
+    "PatchV1OrganizationsUuidResponse": "idme:PatchV1OrganizationsUuidResponse",
+    "legalName": {
+      "@id": "idme:legalName",
+      "@type": "xsd:string"
+    },
+    "organizationSector": {
+      "@id": "idme:organizationSector",
+      "@type": "xsd:string"
+    },
+    "organizationStructure": {
+      "@id": "idme:organizationStructure",
+      "@type": "xsd:string"
+    },
+    "jurisdictionOfFormation": {
+      "@id": "idme:jurisdictionOfFormation",
+      "@type": "xsd:string"
+    },
+    "GetV1SectorsResponse": "idme:GetV1SectorsResponse",
+    "id": {
+      "@id": "idme:id",
+      "@type": "xsd:integer"
+    },
+    "createdAt": {
+      "@id": "idme:createdAt",
+      "@type": "xsd:string"
+    },
+    "updatedAt": {
+      "@id": "idme:updatedAt",
+      "@type": "xsd:string"
+    },
+    "GetV1SectorsIdStructuresResponse": "idme:GetV1SectorsIdStructuresResponse",
+    "sectorId": {
+      "@id": "idme:sectorId",
+      "@type": "xsd:integer"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "ID.me API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects ID.me's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/_ae-authored/idme-openapi-generated.yml.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/_ae-authored/idme-openapi-generated.yml"
+  ]
+}

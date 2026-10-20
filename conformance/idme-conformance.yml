@@ -22,16 +22,21 @@ standards:
   evidence: Security Event Token (SET) delivery via SSF.
 - id: nist-800-63-3-ial2-aal2
   conforms: true
-  evidence: >-
-    Identity proofing aligned to NIST 800-63-3 IAL2/AAL2; documented on
-    docs.id.me/guides/learn-more/digital-wallet/nist-ial-2.
+  evidence: Identity proofing aligned to NIST 800-63-3 IAL2/AAL2; documented on docs.id.me/guides/learn-more/digital-wallet/nist-ial-2.
 - id: rfc9116-security-txt
   conforms: true
   evidence: /.well-known/security.txt published with Contact and Canonical.
 - id: rfc9457-problem-details
   conforms: false
   evidence: Services API uses a custom {code, message} error envelope, not application/problem+json.
-notes: >-
-  ID.me is a NIST 800-63-3 IAL2/AAL2 credential service provider used across US
-  federal and state agencies. Formal certifications (FedRAMP, SOC 2) are not
-  machine-verifiable from the developer docs and are not asserted here.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+notes: ID.me is a NIST 800-63-3 IAL2/AAL2 credential service provider used across US federal and state agencies. Formal certifications (FedRAMP,
+  SOC 2) are not machine-verifiable from the developer docs and are not asserted here.

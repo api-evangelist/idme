@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idme/main/json-schema/idme-patch-v1-organizations-uuid-request-schema.json",
+  "title": "PatchV1OrganizationsUuidRequest",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idme-applications-openapi-generated.yml#/components/schemas/PatchV1OrganizationsUuidRequest",
+  "type": "object",
+  "properties": {
+    "logoUrl": {
+      "type": "string",
+      "description": "URL to organization logo"
+    },
+    "doingBusinessAsNames": {
+      "type": "array",
+      "description": "Array of 'doing business as' names"
+    },
+    "dateOfFormation": {
+      "type": "string",
+      "description": "Date of organization formation"
+    },
+    "ein": {
+      "type": "string",
+      "description": "Employer Identification Number"
+    },
+    "duns": {
+      "type": "string",
+      "description": "DUNS number"
+    },
+    "uei": {
+      "type": "string",
+      "description": "Unique Entity Identifier"
+    },
+    "primaryAddress": {
+      "type": "object",
+      "description": "Primary business address"
+    },
+    "officeAddress": {
+      "type": "object",
+      "description": "Office address"
+    }
+  }
+}

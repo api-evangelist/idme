@@ -1,14 +1,11 @@
 aid: idme
 name: ID.me
-description: ID.me is a digital identity network that provides NIST 800-63-3 IAL2/AAL2 identity verification,
-  single sign-on, and group affiliation (community) verification for government agencies, healthcare,
-  and commercial partners. For developers, ID.me exposes an OpenID Connect and OAuth 2.0 identity provider
-  (authorization code flow with PKCE, plus SAML 2.0 federation), a REST Services API for telecom and document
-  verification, an Applications API, a Document Passback API, and a Shared Signals Framework (SSF) event
-  stream for fraud and verification signals. Native iOS and Android SDKs, a button widget, conversion
-  tracking, and multi-language sample code round out the developer surface, letting relying parties add
-  strong identity proofing and attribute exchange to any application or IAM platform (Okta, Keycloak,
-  Entra, PingOne, AWS Cognito).
+description: ID.me is a digital identity network that provides NIST 800-63-3 IAL2/AAL2 identity verification, single sign-on, and group affiliation (community)
+  verification for government agencies, healthcare, and commercial partners. For developers, ID.me exposes an OpenID Connect and OAuth 2.0 identity provider
+  (authorization code flow with PKCE, plus SAML 2.0 federation), a REST Services API for telecom and document verification, an Applications API, a Document
+  Passback API, and a Shared Signals Framework (SSF) event stream for fraud and verification signals. Native iOS and Android SDKs, a button widget, conversion
+  tracking, and multi-language sample code round out the developer surface, letting relying parties add strong identity proofing and attribute exchange
+  to any application or IAM platform (Okta, Keycloak, Entra, PingOne, AWS Cognito).
 url: https://raw.githubusercontent.com/api-evangelist/idme/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -70,68 +67,32 @@ tags_raw:
 - Fraud Prevention
 - Government
 - Identity Federation
-apis:
-- name: ID.me OpenID Connect & OAuth 2.0 API
-  description: ID.me's OpenID Connect and OAuth 2.0 identity provider. Supports the authorization code
-    flow (with PKCE), refresh tokens, encrypted ID tokens and userinfo, and returns verified identity
-    attributes and community/group affiliation (military, responder, student, teacher, government, employee,
-    etc.) after a user completes identity verification.
-  humanURL: https://docs.id.me/guides/oidc/overview
-  baseURL: https://api.id.me
-  tags:
-  - OpenID Connect
-  - Authentication
-  - Identity Verification
-  tags_raw:
-  - OpenID Connect
-  - OAuth 2.0
-  - Authentication
-  - Identity Verification
-  properties:
-  - type: Documentation
-    url: https://docs.id.me/guides/oidc/overview
-  - type: APIReference
-    url: https://docs.id.me/guides/o-auth-2-0/integration
-  - type: OpenIDConnect
-    url: https://api.id.me/oidc/.well-known/openid-configuration
-  - type: Authentication
-    url: authentication/idme-authentication.yml
-  - type: OAuthScopes
-    url: scopes/idme-scopes.yml
-  - type: ErrorCatalog
-    url: errors/idme-problem-types.yml
-- name: ID.me Services API
-  description: 'ID.me''s REST Services API for orchestrating identity verification: create and manage
-    verifications, verify phone possession and identity via telecom endpoints, and verify identity documents
-    (driver''s licenses, passports, passport cards). Delivers real-time transaction results via webhooks
-    and a sandbox of pre-configured test personas.'
-  humanURL: https://docs.id.me/services-api-overview
-  baseURL: https://services.idmelabs.com
-  tags:
-  - Identity Verification
-  - Documents
-  - Telecommunications
-  - KYC
-  tags_raw:
-  - Identity Verification
-  - Documents
-  - Telecom
-  - KYC
-  properties:
-  - type: Documentation
-    url: https://docs.id.me/services-api-overview
-  - type: APIReference
-    url: https://docs.id.me/services-api/verification
-  - type: Webhooks
-    url: asyncapi/idme-services-webhooks.yml
-  - type: Sandbox
-    url: sandbox/idme-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Spectral
+  url: rules/idme-rules.yml
+- type: JSONLD
+  url: json-ld/idme-context.jsonld
+- type: Vocabulary
+  url: vocabulary/idme-vocabulary.yml
+- type: DataModel
+  url: data-model/idme-data-model.yml
+- type: Security
+  url: security/idme-vulnerability-disclosure.yml
+- type: Hosts
+  url: hosts/idme-hosts.yml
+- type: IntegrationEdges
+  url: integrations/idme-integration-edges.yml
+- type: Vendors
+  url: vendors/idme-vendors.yml
+- type: TrustCenter
+  url: security/idme-trust-center.yml
 - url: https://network.id.me/insights-home/
   type: Blog
 - url: https://network.id.me/feed/
@@ -192,10 +153,148 @@ common:
   url: security/idme-domain-security.yml
 - type: VulnerabilityDisclosure
   url: security/idme-vulnerability-disclosure.yml
-- type: Security
-  url: https://www.id.me/.well-known/security.txt
+apis:
+- name: ID.me OpenID Connect & OAuth 2.0 API
+  description: ID.me's OpenID Connect and OAuth 2.0 identity provider. Supports the authorization code flow (with PKCE), refresh tokens, encrypted ID tokens
+    and userinfo, and returns verified identity attributes and community/group affiliation (military, responder, student, teacher, government, employee,
+    etc.) after a user completes identity verification.
+  humanURL: https://docs.id.me/guides/oidc/overview
+  baseURL: https://api.id.me
+  tags:
+  - OpenID Connect
+  - Authentication
+  - Identity Verification
+  tags_raw:
+  - OpenID Connect
+  - OAuth 2.0
+  - Authentication
+  - Identity Verification
+  properties:
+  - type: Documentation
+    url: https://docs.id.me/guides/oidc/overview
+  - type: APIReference
+    url: https://docs.id.me/guides/o-auth-2-0/integration
+  - type: OpenIDConnect
+    url: https://api.id.me/oidc/.well-known/openid-configuration
+  - type: Authentication
+    url: authentication/idme-authentication.yml
+  - type: OAuthScopes
+    url: scopes/idme-scopes.yml
+  - type: ErrorCatalog
+    url: errors/idme-problem-types.yml
+  aid: idme:id-me-openid-connect-oauth-2-0-api
+- name: ID.me Services API
+  description: 'ID.me''s REST Services API for orchestrating identity verification: create and manage verifications, verify phone possession and identity
+    via telecom endpoints, and verify identity documents (driver''s licenses, passports, passport cards). Delivers real-time transaction results via webhooks
+    and a sandbox of pre-configured test personas.'
+  humanURL: https://docs.id.me/services-api-overview
+  baseURL: https://services.idmelabs.com
+  tags:
+  - Identity Verification
+  - Documents
+  - Telecommunications
+  - KYC
+  tags_raw:
+  - Identity Verification
+  - Documents
+  - Telecom
+  - KYC
+  properties:
+  - type: Documentation
+    url: https://docs.id.me/services-api-overview
+  - type: APIReference
+    url: https://docs.id.me/services-api/verification
+  - type: Webhooks
+    url: asyncapi/idme-services-webhooks.yml
+  - type: Sandbox
+    url: sandbox/idme-sandbox.yml
+  aid: idme:id-me-services-api
+- aid: idme:applications-api
+  name: ID.me applications API
+  description: 'ID.me applications API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-10-20);
+    not the provider''s own document.'
+  humanURL: https://docs.id.me/apis/applications-api
+  baseURL: https://services.idmelabs.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/idme-applications-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/idme-post-v1-organizations-organizationuuid-applications-request-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-get-v1-domains-domain-response-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-patch-v1-organizations-uuid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-post-v1-domains-response-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-patch-v1-organizations-uuid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-get-v1-sectors-id-structures-response-schema.json
+- aid: idme:core-api
+  name: ID.me core API
+  description: 'ID.me core API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-10-20); not the provider''s
+    own document.'
+  humanURL: https://docs.id.me/apis/check-credentials-api
+  baseURL: https://api.id.me
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/idme-core-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/idme-post-api-auth-v1-credentials-uuid-check-response-schema.json
+- aid: idme:document-passback-api
+  name: ID.me document passback API
+  description: 'ID.me document passback API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-20);
+    not the provider''s own document.'
+  humanURL: https://docs.id.me/apis/document-passback-api
+  baseURL: https://api.id.me
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/idme-document-passback-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/idme-get-api-public-v3-attributes-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-post-api-public-v3-documents-refresh-documenttoken-response-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-post-api-public-v3-documents-documenttoken-response-schema.json
+- aid: idme:services-api
+  name: ID.me services API
+  description: 'ID.me services API as documented publicly: 14 operations. Contract generated from the documentation by API Evangelist (2026-10-20); not
+    the provider''s own document.'
+  humanURL: https://docs.id.me/apis/services-api
+  baseURL: https://services.idmelabs.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/idme-services-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/idme-post-api-v2-telecom-identity-request-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-post-api-v2-telecom-possession-sms-send-request-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-post-api-v2-telecom-possession-sms-confirm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-get-api-v2-product-transactionid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-get-api-v2-document-passcard-verify-response-schema.json
+  - type: JSONSchema
+    url: json-schema/idme-get-api-v2-document-passport-verify-response-schema.json
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v5
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://docs.id.me/mcp
+    status: null
+  - url: https://www.id.me
+    status: 200

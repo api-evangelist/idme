@@ -1,0 +1,232 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/idme-openapi-generated.yml
+vocabulary:
+  name: ID.me Domain Vocabulary
+  description: 'Terms declared by ID.me''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: PostApiAuthV1CredentialsUuidCheckResponse
+    definition: 'Object declared by the contract with fields: verified.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiAuthV1CredentialsUuidCheckResponse
+  - term: GetApiPublicV3AttributesJsonResponse
+    definition: 'Object declared by the contract with fields: handle, name, value.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetApiPublicV3AttributesJsonResponse
+  - term: PostApiPublicV3DocumentsRefreshDocumenttokenResponse
+    definition: 'Object declared by the contract with fields: document_token.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiPublicV3DocumentsRefreshDocumenttokenResponse
+  - term: PostApiPublicV3DocumentsDocumenttokenResponse
+    definition: 'Object declared by the contract with fields: image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiPublicV3DocumentsDocumenttokenResponse
+  - term: GetApiV2ProductTransactionidResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetApiV2ProductTransactionidResponse
+  - term: GetApiV2DocumentLicenseVerifyResponse
+    definition: 'Object declared by the contract with fields:  transaction_id ,  verification_id ,  product ,  status .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetApiV2DocumentLicenseVerifyResponse
+  - term: PostApiV2DocumentLicenseVerifyRequest
+    definition: 'Object declared by the contract with fields: front_image, back_image, callback_url, verification_id, metadata.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2DocumentLicenseVerifyRequest
+  - term: PostApiV2DocumentLicenseVerifyResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2DocumentLicenseVerifyResponse
+  - term: GetApiV2DocumentPasscardVerifyResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetApiV2DocumentPasscardVerifyResponse
+  - term: PostApiV2DocumentPasscardVerifyRequest
+    definition: 'Object declared by the contract with fields: front_image, back_image, callback_url, verification_id, metadata.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2DocumentPasscardVerifyRequest
+  - term: PostApiV2DocumentPasscardVerifyResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2DocumentPasscardVerifyResponse
+  - term: GetApiV2DocumentPassportVerifyResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetApiV2DocumentPassportVerifyResponse
+  - term: PostApiV2DocumentPassportVerifyRequest
+    definition: 'Object declared by the contract with fields: front_image, callback_url, verification_id, metadata.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2DocumentPassportVerifyRequest
+  - term: PostApiV2DocumentPassportVerifyResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2DocumentPassportVerifyResponse
+  - term: PostApiV2TelecomIdentityRequest
+    definition: 'Object declared by the contract with fields: phone, birth_date, callback_url, verification_id, metadata.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2TelecomIdentityRequest
+  - term: PostApiV2TelecomIdentityResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2TelecomIdentityResponse
+  - term: PostApiV2TelecomPossessionSmsConfirmRequest
+    definition: 'Object declared by the contract with fields: code, transaction_id, callback_url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2TelecomPossessionSmsConfirmRequest
+  - term: PostApiV2TelecomPossessionSmsConfirmResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status, result.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2TelecomPossessionSmsConfirmResponse
+  - term: GetApiV2TelecomPossessionSmsSendResponse
+    definition: 'Object declared by the contract with fields:  transaction_id ,  verification_id ,  product ,  status .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetApiV2TelecomPossessionSmsSendResponse
+  - term: PostApiV2TelecomPossessionSmsSendRequest
+    definition: 'Object declared by the contract with fields: phone, callback_url, verification_id, metadata.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2TelecomPossessionSmsSendRequest
+  - term: PostApiV2TelecomPossessionSmsSendResponse
+    definition: 'Object declared by the contract with fields: transaction_id, verification_id, product, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2TelecomPossessionSmsSendResponse
+  - term: PostApiV2VerificationResponse
+    definition: 'Object declared by the contract with fields:  verification_id ,  transactions .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostApiV2VerificationResponse
+  - term: GetV1ApplicationsApplicationuuidResponse
+    definition: 'Object declared by the contract with fields: uuid, name, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetV1ApplicationsApplicationuuidResponse
+  - term: PatchV1ApplicationsApplicationuuidRequest
+    definition: 'Object declared by the contract with fields: status, class, type, subtype, architectureType, operatingSystem, deviceTypes, userTypes.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PatchV1ApplicationsApplicationuuidRequest
+  - term: PatchV1ApplicationsApplicationuuidResponse
+    definition: 'Object declared by the contract with fields: uuid, name, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PatchV1ApplicationsApplicationuuidResponse
+  - term: PostV1DomainsRequest
+    definition: 'Object declared by the contract with fields: domainName.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostV1DomainsRequest
+  - term: PostV1DomainsResponse
+    definition: 'Object declared by the contract with fields: domainName, organizationUuid, validationSource, registrantName, registrar, registry.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostV1DomainsResponse
+  - term: GetV1DomainsDomainResponse
+    definition: 'Object declared by the contract with fields: domainName, organizationUuid, validationSource, registrantName, registrar, registry,
+      registeredAt, expiresAt.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetV1DomainsDomainResponse
+  - term: GetV1JurisdictionsAutocompleteResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetV1JurisdictionsAutocompleteResponse
+  - term: GetV1OrganizationsOrganizationuuidApplicationsResponse
+    definition: 'Object declared by the contract with fields: applications.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetV1OrganizationsOrganizationuuidApplicationsResponse
+  - term: PostV1OrganizationsOrganizationuuidApplicationsRequest
+    definition: 'Object declared by the contract with fields: name, status, class, claimantUuid, type, subtype, architectureType, operatingSystem,
+      deviceTypes, consumerUuid, userTypes.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostV1OrganizationsOrganizationuuidApplicationsRequest
+  - term: PostV1OrganizationsOrganizationuuidApplicationsResponse
+    definition: 'Object declared by the contract with fields: uuid, name, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PostV1OrganizationsOrganizationuuidApplicationsResponse
+  - term: PatchV1OrganizationsUuidRequest
+    definition: 'Object declared by the contract with fields: logoUrl, doingBusinessAsNames, dateOfFormation, ein, duns, uei, primaryAddress,
+      officeAddress.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PatchV1OrganizationsUuidRequest
+  - term: PatchV1OrganizationsUuidResponse
+    definition: 'Object declared by the contract with fields: uuid, legalName, organizationSector, organizationStructure, jurisdictionOfFormation.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/PatchV1OrganizationsUuidResponse
+  - term: GetV1SectorsResponse
+    definition: 'Object declared by the contract with fields: id, name, createdAt, updatedAt.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetV1SectorsResponse
+  - term: GetV1SectorsIdStructuresResponse
+    definition: 'Object declared by the contract with fields: id, sectorId, name, createdAt, updatedAt.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idme-openapi-generated.yml#/components/schemas/GetV1SectorsIdStructuresResponse
+  - term: Api
+    definition: 'Resource group in the contract; its operation POST /api/auth/v1/credentials/{uuid}/check: Returns whether a user has a valid
+      and active credential required for a given policy.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idme-openapi-generated.yml
+  - term: Health
+    definition: 'Resource group in the contract; its operation GET /health: GET /health'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idme-openapi-generated.yml
+  - term: Applications
+    definition: 'Resource group in the contract; its operation GET /v1/applications/{applicationuuid}: Returns the application object with all
+      attributes.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idme-openapi-generated.yml
+  - term: Domains
+    definition: 'Resource group in the contract; its operation POST /v1/domains: Create and validate a domain by performing RDAP/WHOIS lookup.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idme-openapi-generated.yml
+  - term: Jurisdictions
+    definition: 'Resource group in the contract; its operation GET /v1/jurisdictions/autocomplete: Get autocomplete predictions for jurisdiction
+      searches.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idme-openapi-generated.yml
+  - term: Organizations
+    definition: 'Resource group in the contract; its operation GET /v1/organizations/{organizationuuid}/applications: Returns an array of application
+      objects (empty array if none exist).'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idme-openapi-generated.yml
+  - term: Sectors
+    definition: 'Resource group in the contract; its operation GET /v1/sectors: Retrieve organization sector reference data.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idme-openapi-generated.yml

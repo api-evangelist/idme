@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idme/main/json-schema/idme-get-v1-domains-domain-response-schema.json",
+  "title": "GetV1DomainsDomainResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idme-applications-openapi-generated.yml#/components/schemas/GetV1DomainsDomainResponse",
+  "type": "object",
+  "properties": {
+    "domainName": {
+      "type": "string",
+      "description": "Domain name"
+    },
+    "organizationUuid": {
+      "type": "string",
+      "description": "Organization UUID that owns the domain"
+    },
+    "validationSource": {
+      "type": "string",
+      "description": "Source of domain validation"
+    },
+    "registrantName": {
+      "type": "string",
+      "description": "Domain registrant name"
+    },
+    "registrar": {
+      "type": "string",
+      "description": "Domain registrar"
+    },
+    "registry": {
+      "type": "string",
+      "description": "Domain registry"
+    },
+    "registeredAt": {
+      "type": "string",
+      "description": "Domain registration date"
+    },
+    "expiresAt": {
+      "type": "string",
+      "description": "Domain expiration date"
+    }
+  }
+}

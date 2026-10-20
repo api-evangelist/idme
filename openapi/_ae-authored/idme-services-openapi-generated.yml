@@ -1,0 +1,600 @@
+openapi: 3.1.0
+info:
+  title: ID.me services API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 14 operation(s) read from 7 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; ID.me has published no machine-readable contract that the pipeline
+    could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 9
+    documentation: 19
+    pages-with-code: 8
+    pages-read: 16
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://docs.id.me/apis/services-api/documents
+  - https://docs.id.me/apis/services-api/documents.md
+  - https://docs.id.me/apis/services-api/overview
+  - https://docs.id.me/apis/services-api/telecom
+  - https://docs.id.me/apis/services-api/telecom.md
+  - https://docs.id.me/apis/services-api/verification
+  - https://docs.id.me/apis/services-api/webhooks
+  x-docs-section: services-api
+servers:
+- url: https://services.idmelabs.com
+paths:
+  /api/v2/{product}/{transactionId}:
+    get:
+      operationId: get_api_v2_product_transactionId
+      tags:
+      - Api
+      summary: Retrieve the result of a verification transaction.
+      x-source: https://docs.id.me/apis/services-api/webhooks
+      parameters:
+      - name: product
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transactionId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2ProductTransactionidResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/document/license/verify:
+    get:
+      operationId: get_api_v2_document_license_verify
+      tags:
+      - Api
+      summary: GET /api/v2/document/license/verify
+      x-source: https://docs.id.me/apis/services-api/documents
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2DocumentLicenseVerifyResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location ' https://services.idmelabs.com/api/v2/document/license/verify ' \\ --form ' front_image=@\"license/success.jpg\"\
+          \ ' \\ --form ' back_image=@\"license/success_back.jpg\" ' \n Example response \n 200 OK { \" transaction_id \" : \" 6ba2c24b-efad-4ec2-919a-d901f872f35e\
+          \ \" , \" verification_id \" : \" a1d32b35-51ad-41f1-8ef9-00d59e86fcf3 \" , \" product \" : \" document.license.verify \" , \" status\
+          \ \" : { \""
+    post:
+      operationId: post_api_v2_document_license_verify
+      tags:
+      - Api
+      summary: Verifies a driver's license or state ID by processing front and back images of the document.
+      x-source: https://docs.id.me/apis/services-api/documents
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2DocumentLicenseVerifyRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2DocumentLicenseVerifyResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/document/passcard/verify:
+    get:
+      operationId: get_api_v2_document_passcard_verify
+      tags:
+      - Api
+      summary: GET /api/v2/document/passcard/verify
+      x-source: https://docs.id.me/apis/services-api/documents.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2DocumentPasscardVerifyResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location ''https://services.idmelabs.com/api/v2/document/passcard/verify''  --form ''front_image=@"passcard/success.jpg"''  --form
+          ''back_image=@"passcard/success_back.jpg"''
+
+          ```'
+    post:
+      operationId: post_api_v2_document_passcard_verify
+      tags:
+      - Api
+      summary: Verifies a passcard by processing front and back images of the document.
+      x-source: https://docs.id.me/apis/services-api/documents
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2DocumentPasscardVerifyRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2DocumentPasscardVerifyResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/document/passport/verify:
+    get:
+      operationId: get_api_v2_document_passport_verify
+      tags:
+      - Api
+      summary: GET /api/v2/document/passport/verify
+      x-source: https://docs.id.me/apis/services-api/documents.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2DocumentPassportVerifyResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location ''https://services.idmelabs.com/api/v2/document/passport/verify''  --form ''front_image=@"passport/success.jpg"''
+
+          ```'
+    post:
+      operationId: post_api_v2_document_passport_verify
+      tags:
+      - Api
+      summary: Verifies a passport by processing a front image of the document.
+      x-source: https://docs.id.me/apis/services-api/documents
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2DocumentPassportVerifyRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2DocumentPassportVerifyResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/telecom/identity:
+    post:
+      operationId: post_api_v2_telecom_identity
+      tags:
+      - Api
+      summary: Matches a phone number and birth date against carrier records.
+      x-source: https://docs.id.me/apis/services-api/telecom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2TelecomIdentityRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2TelecomIdentityResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/telecom/possession/sms/confirm:
+    get:
+      operationId: get_api_v2_telecom_possession_sms_confirm
+      tags:
+      - Api
+      summary: Validates the OTP submitted by the user.
+      x-source: https://docs.id.me/apis/services-api/telecom.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_v2_telecom_possession_sms_confirm
+      tags:
+      - Api
+      summary: Validates the OTP submitted by the user.
+      x-source: https://docs.id.me/apis/services-api/telecom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2TelecomPossessionSmsConfirmRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2TelecomPossessionSmsConfirmResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/telecom/possession/sms/send:
+    get:
+      operationId: get_api_v2_telecom_possession_sms_send
+      tags:
+      - Api
+      summary: GET /api/v2/telecom/possession/sms/send
+      x-source: https://docs.id.me/apis/services-api/telecom
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2TelecomPossessionSmsSendResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location ' https://services.idmelabs.com/api/v2/telecom/possession/sms/send ' \\ --header ' Content-Type: application/json\
+          \ ' \\ --data ' { \"phone\": \"8888269018\", \"callback_url\": \"http://example.com/callback\" } ' \n Example response \n 200 OK { \"\
+          \ transaction_id \" : \" afae99c6-f5c0-4c05-a5f6-f9578db460fa \" , \" verification_id \" : \" 4b4e00be-9333-409c-b76e-fe9b20c17be4 \"\
+          \ , \" product \" : \" telecom."
+    post:
+      operationId: post_api_v2_telecom_possession_sms_send
+      tags:
+      - Api
+      summary: Sends a six-digit OTP to the provided phone number to establish possession.
+      x-source: https://docs.id.me/apis/services-api/telecom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2TelecomPossessionSmsSendRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2TelecomPossessionSmsSendResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/verification:
+    post:
+      operationId: post_api_v2_verification
+      tags:
+      - Api
+      summary: POST /api/v2/verification
+      x-source: https://docs.id.me/apis/services-api/verification
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2VerificationResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location --request POST ' https://services.idmelabs.com/api/v2/verification ' \\ --header ' Content-Type: application/json\
+          \ ' \\ --data '' \n Example response \n 200 OK { \" verification_id \" : \" 9b1cef39-46c3-48f2-8dbf-306cf73093bd \" , \" transactions\
+          \ \" : [] } \n Verification status \n GET /api/v2/verification/:verification_id \n Returns a verification and all of its associated\
+          \ transactions. \n Mock "
+  /health:
+    get:
+      operationId: get_health
+      tags:
+      - Health
+      summary: GET /health
+      x-source: https://docs.id.me/apis/services-api/overview
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location ' https://services.idmelabs.com/health ' \n Returns 200 OK with no response body. Was this page helpful? Yes\
+          \ No Edit this page Previous Verification Next Built with DesktopMenu) --> Home Integrations Guides APIs Brand Assets APIs Guide Applications\
+          \ API Applications API Guide Document Passback API Document Passback API Guide Check Credentials API Check Credentials API Guide Services "
+security:
+- bearer: []
+components:
+  schemas:
+    GetApiV2ProductTransactionidResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+          description: The transaction ID
+        verification_id:
+          type: string
+          description: The verification ID
+        product:
+          type: string
+          description: The product type
+        status:
+          type: object
+          description: Status object containing code, message, created, and updated fields
+    GetApiV2DocumentLicenseVerifyResponse:
+      type: object
+      properties:
+        ' transaction_id ':
+          type: string
+        ' verification_id ':
+          type: string
+        ' product ':
+          type: string
+        ' status ':
+          type: object
+          properties:
+            ' code ':
+              type: integer
+            ' message ':
+              type: string
+            ' created ':
+              type: string
+            ' updated ':
+              type: string
+    PostApiV2DocumentLicenseVerifyRequest:
+      type: object
+      properties:
+        front_image:
+          type: string
+        back_image:
+          type: string
+        callback_url:
+          type: string
+        verification_id:
+          type: string
+        metadata:
+          type: string
+      required:
+      - front_image
+      - back_image
+    PostApiV2DocumentLicenseVerifyResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+    GetApiV2DocumentPasscardVerifyResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+            created:
+              type: string
+              format: date-time
+            updated:
+              type: string
+              format: date-time
+    PostApiV2DocumentPasscardVerifyRequest:
+      type: object
+      properties:
+        front_image:
+          type: string
+        back_image:
+          type: string
+        callback_url:
+          type: string
+        verification_id:
+          type: string
+        metadata:
+          type: string
+      required:
+      - front_image
+      - back_image
+    PostApiV2DocumentPasscardVerifyResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+    GetApiV2DocumentPassportVerifyResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+            created:
+              type: string
+              format: date-time
+            updated:
+              type: string
+              format: date-time
+    PostApiV2DocumentPassportVerifyRequest:
+      type: object
+      properties:
+        front_image:
+          type: string
+        callback_url:
+          type: string
+        verification_id:
+          type: string
+        metadata:
+          type: string
+      required:
+      - front_image
+    PostApiV2DocumentPassportVerifyResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+    PostApiV2TelecomIdentityRequest:
+      type: object
+      properties:
+        phone:
+          type: string
+          description: The phone number to run an identity check against. Must be a 10-digit valid phone number
+        birth_date:
+          type: string
+          description: 'The user''s date of birth in ISO 8601 format: YYYY-MM-DD'
+        callback_url:
+          type: string
+          description: The URL to receive the callback for the transaction
+        verification_id:
+          type: string
+          description: The ID of the verification to associate with this transaction. If not provided, a new verification will be created
+        metadata:
+          type: string
+          description: Custom metadata for the transaction. Can be any valid JSON value up to 500 characters
+      required:
+      - phone
+      - birth_date
+    PostApiV2TelecomIdentityResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+    PostApiV2TelecomPossessionSmsConfirmRequest:
+      type: object
+      properties:
+        code:
+          type: string
+          description: The six-digit OTP received by the user. In sandbox, code 123123 will trigger a success response
+        transaction_id:
+          type: string
+          description: The transaction_id from the Possession - SMS Send request
+        callback_url:
+          type: string
+          description: The URL to receive the callback for the transaction
+      required:
+      - code
+      - transaction_id
+    PostApiV2TelecomPossessionSmsConfirmResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+        result:
+          type: object
+    GetApiV2TelecomPossessionSmsSendResponse:
+      type: object
+      properties:
+        ' transaction_id ':
+          type: string
+        ' verification_id ':
+          type: string
+        ' product ':
+          type: string
+        ' status ':
+          type: object
+          properties:
+            ' code ':
+              type: integer
+            ' message ':
+              type: string
+            ' created ':
+              type: string
+            ' updated ':
+              type: string
+    PostApiV2TelecomPossessionSmsSendRequest:
+      type: object
+      properties:
+        phone:
+          type: string
+          description: The phone number to receive the OTP via SMS. Must be a 10-digit valid number that can receive SMS messages
+        callback_url:
+          type: string
+          description: The URL to receive the callback for the transaction
+        verification_id:
+          type: string
+          description: The ID of the verification to associate with this transaction. If not provided, a new verification will be created
+        metadata:
+          type: string
+          description: Custom metadata for the transaction. Can be any valid JSON value up to 500 characters
+      required:
+      - phone
+    PostApiV2TelecomPossessionSmsSendResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+        verification_id:
+          type: string
+        product:
+          type: string
+        status:
+          type: object
+    PostApiV2VerificationResponse:
+      type: object
+      properties:
+        ' verification_id ':
+          type: string
+        ' transactions ':
+          type: array
+          items: {}
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+tags:
+- name: Api
+- name: Health

@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: ID.me core API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 1 operation(s)
+    read from 1 public documentation page(s) (each operation names its page in x-source).
+    This is not the provider''s published contract; ID.me has published no machine-readable
+    contract that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 9
+    documentation: 19
+    pages-with-code: 8
+    pages-read: 16
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://docs.id.me/apis/check-credentials-api/overview.md
+  x-docs-section: core
+servers:
+- url: https://api.id.me
+  description: Production (docs.id.me overview)
+- url: https://api.idmelabs.com
+  description: Sandbox (docs.id.me overview)
+paths:
+  /api/auth/v1/credentials/{uuid}/check:
+    post:
+      operationId: post_api_auth_v1_credentials_uuid_check
+      tags:
+      - Api
+      summary: Returns whether a user has a valid and active credential required for
+        a given policy.
+      x-source: https://docs.id.me/apis/check-credentials-api/overview.md
+      parameters:
+      - name: uuid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: scope
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Policy handle to check against (same value passed as the SAML
+          AuthnContext value)
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiAuthV1CredentialsUuidCheckResponse'
+      x-evidence:
+        kind: documentation
+security:
+- bearer: []
+components:
+  schemas:
+    PostApiAuthV1CredentialsUuidCheckResponse:
+      type: object
+      properties:
+        verified:
+          type: boolean
+          description: Whether the user has the required credential
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+tags:
+- name: Api

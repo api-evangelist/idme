@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idme/main/json-schema/idme-post-api-public-v3-documents-refresh-documenttoken-response-schema.json",
+  "title": "PostApiPublicV3DocumentsRefreshDocumenttokenResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idme-document-passback-openapi-generated.yml#/components/schemas/PostApiPublicV3DocumentsRefreshDocumenttokenResponse",
+  "type": "object",
+  "properties": {
+    "document_token": {
+      "type": "string"
+    }
+  }
+}

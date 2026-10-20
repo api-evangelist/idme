@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idme/main/json-schema/idme-patch-v1-organizations-uuid-response-schema.json",
+  "title": "PatchV1OrganizationsUuidResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idme-applications-openapi-generated.yml#/components/schemas/PatchV1OrganizationsUuidResponse",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "Organization UUID"
+    },
+    "legalName": {
+      "type": "string",
+      "description": "Legal name of organization"
+    },
+    "organizationSector": {
+      "type": "string",
+      "description": "Sector"
+    },
+    "organizationStructure": {
+      "type": "string",
+      "description": "Organization structure"
+    },
+    "jurisdictionOfFormation": {
+      "type": "string",
+      "description": "Jurisdiction of formation"
+    }
+  }
+}

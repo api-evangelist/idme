@@ -1,5 +1,12 @@
-generated: '2026-10-14'
+generated: '2026-10-20'
 method: searched
+source:
+- ping-identity/integrations/ping-identity-integration-edges.yml
+- https://zapier.com/apps/idme/integrations
+- https://zapier.com/apps/id-me/integrations
+- https://n8n.io/integrations/idme/
+- https://composio.dev/toolkits/idme
+- https://monid.ai/tools/idme
 checked:
 - https://api.nuget.org/v3
 - https://crates.io/api/v1
@@ -15,8 +22,13 @@ checked:
 - https://www.access-dvs-register.service.gov.uk/register/download-register
 - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-15/suppliers
 - ping-identity/integrations/ping-identity-integration-edges.yml
-source:
-- ping-identity/integrations/ping-identity-integration-edges.yml
+- https://composio.dev/toolkits/idme
+- https://monid.ai/tools/idme
+- https://n8n.io/integrations/idme/
+- https://zapier.com/apps/id-me/integrations
+- https://zapier.com/apps/idme/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: Ping Identity (own)
   partner: ping-identity
@@ -73,6 +85,36 @@ edges:
       lapsed: false
   detected_by: sweep-regtech-aml.py
   first_seen: '2026-10-15'
+- partner_name: RubyGems
+  partner: rubygems
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Ruby)
+  evidence: https://rubygems.org/gems/omniauth-idme
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: RubyGems (public registry JSON)
+    spec_file: null
+    language: Ruby
+    packages:
+    - name: omniauth-idme
+      version: 1.0.0
+      released: '2015-09-03'
+      released_field: version_created_at
+      lapsed: true
+      page: https://rubygems.org/gems/omniauth-idme
+      repo_leg: github-org:idme
+      publisher_leg: org:idme
+      matched_by: github-org
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 - partner_name: FedRAMP
   partner: null
   partner_match: register
@@ -141,33 +183,4 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-gov-cloud.py
   first_seen: '2026-10-15'
-- partner_name: RubyGems
-  partner: rubygems
-  partner_match: register
-  type: register
-  direction: provider-built
-  category: official SDK (Ruby)
-  evidence: https://rubygems.org/gems/omniauth-idme
-  channel: package-registry
-  relationship: distribution-channel
-  contract_reference:
-    register: RubyGems (public registry JSON)
-    spec_file: null
-    language: Ruby
-    packages:
-    - name: omniauth-idme
-      version: 1.0.0
-      released: '2015-09-03'
-      released_field: version_created_at
-      lapsed: true
-      page: https://rubygems.org/gems/omniauth-idme
-      repo_leg: github-org:idme
-      publisher_leg: org:idme
-      matched_by: github-org
-    current: false
-    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
-      24 months'
-    detected_by: sweep-official-sdks.py
-    detected: '2026-10-18'
-  detected_by: sweep-official-sdks.py
-  first_seen: '2026-10-18'
+templates: []

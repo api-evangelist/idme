@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idme/main/json-schema/idme-post-v1-domains-response-schema.json",
+  "title": "PostV1DomainsResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idme-applications-openapi-generated.yml#/components/schemas/PostV1DomainsResponse",
+  "type": "object",
+  "properties": {
+    "domainName": {
+      "type": "string",
+      "description": "Domain name"
+    },
+    "organizationUuid": {
+      "type": "string",
+      "description": "Organization UUID"
+    },
+    "validationSource": {
+      "type": "string",
+      "description": "Source of validation"
+    },
+    "registrantName": {
+      "type": "string",
+      "description": "Registrant name"
+    },
+    "registrar": {
+      "type": "string",
+      "description": "Registrar"
+    },
+    "registry": {
+      "type": "string",
+      "description": "Registry"
+    }
+  }
+}

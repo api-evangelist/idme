@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idme/main/json-schema/idme-post-api-v2-telecom-possession-sms-send-request-schema.json",
+  "title": "PostApiV2TelecomPossessionSmsSendRequest",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idme-services-openapi-generated.yml#/components/schemas/PostApiV2TelecomPossessionSmsSendRequest",
+  "type": "object",
+  "properties": {
+    "phone": {
+      "type": "string",
+      "description": "The phone number to receive the OTP via SMS. Must be a 10-digit valid number that can receive SMS messages"
+    },
+    "callback_url": {
+      "type": "string",
+      "description": "The URL to receive the callback for the transaction"
+    },
+    "verification_id": {
+      "type": "string",
+      "description": "The ID of the verification to associate with this transaction. If not provided, a new verification will be created"
+    },
+    "metadata": {
+      "type": "string",
+      "description": "Custom metadata for the transaction. Can be any valid JSON value up to 500 characters"
+    }
+  },
+  "required": [
+    "phone"
+  ]
+}

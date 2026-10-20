@@ -1,0 +1,8 @@
+name: ID.me agent skills
+generated: '2026-10-20'
+method: generated
+skills:
+- name: idme-telecom-phone-verification
+  path: skills/idme-telecom-phone-verification.md
+- name: idme-document-verification
+  path: skills/idme-document-verification.md

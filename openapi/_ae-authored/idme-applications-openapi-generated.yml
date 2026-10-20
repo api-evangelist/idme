@@ -1,0 +1,494 @@
+openapi: 3.1.0
+info:
+  title: ID.me applications API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 10 operation(s) read from 2 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; ID.me has published no machine-readable contract that the pipeline
+    could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 9
+    documentation: 19
+    pages-with-code: 8
+    pages-read: 16
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://docs.id.me/apis/applications-api/overview
+  - https://docs.id.me/apis/applications-api/overview.md
+  x-docs-section: applications-api
+servers:
+- url: https://services.idmelabs.com
+paths:
+  /v1/applications/{applicationuuid}:
+    get:
+      operationId: get_v1_applications_applicationuuid
+      tags:
+      - Applications
+      summary: Returns the application object with all attributes.
+      x-source: https://docs.id.me/apis/applications-api/overview
+      parameters:
+      - name: applicationuuid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1ApplicationsApplicationuuidResponse'
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_v1_applications_applicationuuid
+      tags:
+      - Applications
+      summary: Returns the updated application object.
+      x-source: https://docs.id.me/apis/applications-api/overview
+      parameters:
+      - name: applicationuuid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV1ApplicationsApplicationuuidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV1ApplicationsApplicationuuidResponse'
+      x-evidence:
+        kind: documentation
+  /v1/domains:
+    post:
+      operationId: post_v1_domains
+      tags:
+      - Domains
+      summary: Create and validate a domain by performing RDAP/WHOIS lookup.
+      x-source: https://docs.id.me/apis/applications-api/overview.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1DomainsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1DomainsResponse'
+      x-evidence:
+        kind: documentation
+  /v1/domains/{domain}:
+    get:
+      operationId: get_v1_domains_domain
+      tags:
+      - Domains
+      summary: Retrieve domain validation and registration data.
+      x-source: https://docs.id.me/apis/applications-api/overview.md
+      parameters:
+      - name: domain
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1DomainsDomainResponse'
+      x-evidence:
+        kind: documentation
+  /v1/jurisdictions/autocomplete:
+    get:
+      operationId: get_v1_jurisdictions_autocomplete
+      tags:
+      - Jurisdictions
+      summary: Get autocomplete predictions for jurisdiction searches.
+      x-source: https://docs.id.me/apis/applications-api/overview.md
+      parameters:
+      - name: query
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Search query string for autocomplete
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1JurisdictionsAutocompleteResponse'
+      x-evidence:
+        kind: documentation
+  /v1/organizations/{organizationuuid}/applications:
+    get:
+      operationId: get_v1_organizations_organizationuuid_applications
+      tags:
+      - Organizations
+      summary: Returns an array of application objects (empty array if none exist).
+      x-source: https://docs.id.me/apis/applications-api/overview
+      parameters:
+      - name: organizationuuid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1OrganizationsOrganizationuuidApplicationsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_v1_organizations_organizationuuid_applications
+      tags:
+      - Organizations
+      summary: Returns the created application object including the generated UUID.
+      x-source: https://docs.id.me/apis/applications-api/overview
+      parameters:
+      - name: organizationuuid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1OrganizationsOrganizationuuidApplicationsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1OrganizationsOrganizationuuidApplicationsResponse'
+      x-evidence:
+        kind: documentation
+  /v1/organizations/{uuid}:
+    patch:
+      operationId: patch_v1_organizations_uuid
+      tags:
+      - Organizations
+      summary: Partially update an organization with the provided fields.
+      x-source: https://docs.id.me/apis/applications-api/overview.md
+      parameters:
+      - name: uuid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV1OrganizationsUuidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV1OrganizationsUuidResponse'
+      x-evidence:
+        kind: documentation
+  /v1/sectors:
+    get:
+      operationId: get_v1_sectors
+      tags:
+      - Sectors
+      summary: Retrieve organization sector reference data.
+      x-source: https://docs.id.me/apis/applications-api/overview.md
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1SectorsResponse'
+      x-evidence:
+        kind: documentation
+  /v1/sectors/{id}/structures:
+    get:
+      operationId: get_v1_sectors_id_structures
+      tags:
+      - Sectors
+      summary: Retrieve organization structure options for a specific sector.
+      x-source: https://docs.id.me/apis/applications-api/overview.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1SectorsIdStructuresResponse'
+      x-evidence:
+        kind: documentation
+security:
+- bearer: []
+components:
+  schemas:
+    GetV1ApplicationsApplicationuuidResponse:
+      type: object
+      properties:
+        uuid:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+    PatchV1ApplicationsApplicationuuidRequest:
+      type: object
+      properties:
+        status:
+          type: string
+        class:
+          type: string
+        type:
+          type: string
+        subtype:
+          type: string
+        architectureType:
+          type: string
+        operatingSystem:
+          type: string
+        deviceTypes:
+          type: string
+        userTypes:
+          type: string
+    PatchV1ApplicationsApplicationuuidResponse:
+      type: object
+      properties:
+        uuid:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+    PostV1DomainsRequest:
+      type: object
+      properties:
+        domainName:
+          type: string
+          description: Domain name to validate
+      required:
+      - domainName
+    PostV1DomainsResponse:
+      type: object
+      properties:
+        domainName:
+          type: string
+          description: Domain name
+        organizationUuid:
+          type: string
+          description: Organization UUID
+        validationSource:
+          type: string
+          description: Source of validation
+        registrantName:
+          type: string
+          description: Registrant name
+        registrar:
+          type: string
+          description: Registrar
+        registry:
+          type: string
+          description: Registry
+    GetV1DomainsDomainResponse:
+      type: object
+      properties:
+        domainName:
+          type: string
+          description: Domain name
+        organizationUuid:
+          type: string
+          description: Organization UUID that owns the domain
+        validationSource:
+          type: string
+          description: Source of domain validation
+        registrantName:
+          type: string
+          description: Domain registrant name
+        registrar:
+          type: string
+          description: Domain registrar
+        registry:
+          type: string
+          description: Domain registry
+        registeredAt:
+          type: string
+          description: Domain registration date
+        expiresAt:
+          type: string
+          description: Domain expiration date
+    GetV1JurisdictionsAutocompleteResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          description: Array of autocomplete predictions
+    GetV1OrganizationsOrganizationuuidApplicationsResponse:
+      type: object
+      properties:
+        applications:
+          type: array
+    PostV1OrganizationsOrganizationuuidApplicationsRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Defined by the user
+        status:
+          type: string
+        class:
+          type: string
+        claimantUuid:
+          type: string
+          description: The UUID of an existing organization that defines which organization the application belongs to.
+        type:
+          type: string
+        subtype:
+          type: string
+        architectureType:
+          type: string
+        operatingSystem:
+          type: string
+        deviceTypes:
+          type: string
+        consumerUuid:
+          type: string
+          description: The consumerUuid field is optional and is only required in specific migration scenarios.
+        userTypes:
+          type: string
+      required:
+      - name
+      - status
+      - class
+      - claimantUuid
+    PostV1OrganizationsOrganizationuuidApplicationsResponse:
+      type: object
+      properties:
+        uuid:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+    PatchV1OrganizationsUuidRequest:
+      type: object
+      properties:
+        logoUrl:
+          type: string
+          description: URL to organization logo
+        doingBusinessAsNames:
+          type: array
+          description: Array of 'doing business as' names
+        dateOfFormation:
+          type: string
+          description: Date of organization formation
+        ein:
+          type: string
+          description: Employer Identification Number
+        duns:
+          type: string
+          description: DUNS number
+        uei:
+          type: string
+          description: Unique Entity Identifier
+        primaryAddress:
+          type: object
+          description: Primary business address
+        officeAddress:
+          type: object
+          description: Office address
+    PatchV1OrganizationsUuidResponse:
+      type: object
+      properties:
+        uuid:
+          type: string
+          description: Organization UUID
+        legalName:
+          type: string
+          description: Legal name of organization
+        organizationSector:
+          type: string
+          description: Sector
+        organizationStructure:
+          type: string
+          description: Organization structure
+        jurisdictionOfFormation:
+          type: string
+          description: Jurisdiction of formation
+    GetV1SectorsResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Internal sector ID
+        name:
+          type: string
+          description: Sector name
+        createdAt:
+          type: string
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          description: Last modification timestamp
+    GetV1SectorsIdStructuresResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Internal structure ID
+        sectorId:
+          type: integer
+          description: Foreign key to sector
+        name:
+          type: string
+          description: Structure name
+        createdAt:
+          type: string
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          description: Last modification timestamp
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+tags:
+- name: Applications
+- name: Domains
+- name: Jurisdictions
+- name: Organizations
+- name: Sectors

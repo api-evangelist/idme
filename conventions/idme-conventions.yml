@@ -27,7 +27,9 @@ webhooks:
   supported: true
   style: HTTPS push; per-request `callback_url` or org-level configuration
   retry: ID.me retries 3 times before dropping the callback
-  events: [telecom verification result, document verification result]
+  events:
+  - telecom verification result
+  - document verification result
   ref: asyncapi/idme-services-webhooks.yml
 event_streaming:
   shared_signals_framework: true
@@ -35,15 +37,13 @@ event_streaming:
   delivery: HTTPS push of Security Event Tokens
 idempotency:
   supported: false
-  note: >-
-    No idempotency-key header or contract is documented. Verification requests
-    are keyed by transaction_id/verification_id assigned by ID.me; callers do
-    not supply an idempotency key.
+  note: No idempotency-key header or contract is documented. Verification requests are keyed by transaction_id/verification_id
+    assigned by ID.me; callers do not supply an idempotency key.
+  coverage: none
 rate_limiting:
   signaled: true
   note: Services API returns HTTP 429 on rate limiting; no documented headers.
 pagination:
   note: Not applicable to the verification/identity surface (no list-collection endpoints documented).
-notes: >-
-  Cross-links: authentication/idme-authentication.yml, errors/idme-problem-types.yml,
-  lifecycle/idme-lifecycle.yml, asyncapi/idme-services-webhooks.yml.
+notes: 'Cross-links: authentication/idme-authentication.yml, errors/idme-problem-types.yml, lifecycle/idme-lifecycle.yml,
+  asyncapi/idme-services-webhooks.yml.'
